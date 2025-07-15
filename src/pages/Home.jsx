@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import img1 from "../assets/Sewage1.jpg";
-import img2 from "../assets/Sewage1.jpg";
+import img2 from "../assets/sewage2.jpg";
 import img3 from "../assets/wastewater.jpg";
 import Footer from "../components/Footer";
 import SewageFeatures from "../components/SewageFeatures";
