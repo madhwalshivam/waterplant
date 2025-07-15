@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hydro Water Treatment Pvt Ltd</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#0e7490",
+            secondary: "#0f766e",
+            accent: "#f59e0b",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fadeInUp {
+      animation: fadeInUp 0.9s ease-out both;
+    }
+
+    .delay-\[100ms\] { animation-delay: 100ms; }
+    .delay-\[200ms\] { animation-delay: 200ms; }
+    .delay-\[300ms\] { animation-delay: 300ms; }
+    .delay-\[400ms\] { animation-delay: 400ms; }
+    .delay-\[500ms\] { animation-delay: 500ms; }
+    .delay-\[600ms\] { animation-delay: 600ms; }
+    .delay-\[700ms\] { animation-delay: 700ms; }
+    .delay-\[800ms\] { animation-delay: 800ms; }
+  </style>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+
