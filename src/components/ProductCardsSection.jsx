@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import plant1 from "../assets/Water-Treatment-Plant-thumb.jpg"; 
 import plant2 from "../assets/Sewage1.jpg";
-import plant3 from "../assets/Water-Ionizer-Machine-thumbs.jpg";
+import plant3 from "../assets/ddd.jpg";
 import { Link } from "react-router-dom";
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },

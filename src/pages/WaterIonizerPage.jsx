@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import imgIntro from '../assets/Water-Ionizer-Machine-thumbs.jpg';
+import imgIntro from '../assets/ddd.jpg';
 import Footer from '../components/Footer';
 import PopularIozined from '../components/PopularIozined';
 import WaterIonizerSlider from '../components/WaterIonizerProducts';
