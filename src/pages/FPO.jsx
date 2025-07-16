@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
-import bottlingImg from '../assets/fo.jpg';
+import bottlingImg from '../assets/fo1.jpg';
 import Testimonials from '../components/Testimonials';
 import bImage from '../assets/b.jpg';
 import FoSlider from '../components/FpoSlider';
