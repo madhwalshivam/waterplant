@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import img1 from "../assets/Sewage1.jpg";
-import img2 from "../assets/sewage2.jpg";
-import img3 from "../assets/wastewater.jpg";
+import img2 from "../assets/s.jpg";
+import img3 from "../assets/s1.jpg";
 import Footer from "../components/Footer";
 import SewageFeatures from "../components/SewageFeatures";
 import ReadMoreButton from "../components/ReadMoreButton";
@@ -54,14 +54,14 @@ const Home = () => {
               alt={`Slide ${index}`}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center px-6 text-center">
+            {/* <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center px-6 text-center">
               <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wide drop-shadow-md mb-4">
                 {slide.heading}
               </h1>
               <p className="text-white text-base sm:text-lg md:text-xl max-w-2xl drop-shadow">
                 {slide.subtext}
               </p>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>

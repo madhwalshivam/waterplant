@@ -5,12 +5,12 @@ import Slider from 'react-slick';
 import imgWastewater from '../assets/Sewage-Treatment.jpg';
 import imgWastewater1 from '../assets/Effluent-Treatment.jpg';
 import Footer from '../components/Footer';
-
+import bImage from '../assets/b.jpg';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Testimonials from '../components/Testimonials';
 
-// Animation variants
+
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
@@ -44,17 +44,20 @@ const sliderSettings = {
 
 const  WastewaterTreatmentPage = () => (
   <div className="font-sans antialiased text-gray-800 bg-gray-100">
-    <section className="bg-cover bg-center h-24 flex items-center justify-center text-white relative">
-               <div className="absolute inset-0 bg-blue-900"></div>
-               <motion.h1
-                 className="text-2xl md:text-4xl font-bold z-10 px-4 py-2 rounded-lg"
-                 initial="hidden"
-                 animate="visible"
-                 variants={fadeIn}
-               >
-                  Wastewater Treatment Plant Manufacturers
-               </motion.h1>
-             </section>
+   
+             <section
+                      className="bg-center bg-cover h-48 flex items-center justify-center text-white"
+                      style={{ backgroundImage: `url(${bImage})` }}
+                    >
+                      <motion.h1
+                        className="text-2xl md:text-4xl font-bold z-10 px-4 py-2 rounded-lg"
+                        initial="hidden"
+                        animate="visible"
+                        variants={fadeIn}
+                      >
+                        Wastewater Treatment Plant Manufacturers
+                      </motion.h1>
+                    </section>
     {/* Why Wastewater Treatment Section */}
     <section className="py-16 px-6 md:px-12 lg:px-24 bg-white">
       <div className="max-w-7xl mx-auto">

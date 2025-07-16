@@ -13,6 +13,7 @@ import img6 from "../assets/img6.png";
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import ProductCardsSection from '../components/ProductCardsSection';
+import bImage from '../assets/b.jpg';
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -51,18 +52,23 @@ const sliderProducts = [
 const EnagicKangenPage = () => {
   return (
     <div className="text-gray-800 font-sans">
-      {/* Hero Title */}
-      <section className="bg-cover bg-center h-24 flex items-center justify-center text-white relative">
-        <div className="absolute inset-0 bg-blue-900"></div>
-        <motion.h1
-          className="text-2xl md:text-4xl font-bold z-10 px-4 py-2 rounded-lg"
-          initial="hidden"
-          animate="visible"
-          variants={fadeIn}
-        >
-          Enagic Kangen Water Machine Manufacturers
-        </motion.h1>
-      </section>
+
+
+<section
+  className="bg-center bg-cover h-48 flex items-center justify-center text-white"
+  style={{ backgroundImage: `url(${bImage})` }}
+>
+  <motion.h1
+    className="text-2xl md:text-4xl font-bold z-10 px-4 py-2 rounded-lg"
+    initial="hidden"
+    animate="visible"
+    variants={fadeIn}
+  >
+    Enagic Kangen Water Machine Manufacturers
+  </motion.h1>
+</section>
+
+
 
       {/* Intro Section */}
       <section className="py-16 px-4 md:px-20 bg-gray-50">

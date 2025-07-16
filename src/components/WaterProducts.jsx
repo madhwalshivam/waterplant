@@ -37,13 +37,13 @@ const categories = [
     title: 'Mineral Water Plant',
     image: imgMineral,
     description: 'Advanced systems ensuring clean, safe mineral-rich water.',
-    link: '/mineral-water-plant',
+    link: '/mineral-water',
   },
   {
     title: 'Water Filling Machine',
     image: imgFilling,
     description: 'Precision-based machines for streamlined water-filling operations.',
-    link: '/water-filling-machine',
+    link: '/water-filling',
   },
   {
     title: '1 Litre Bottling Plant',
@@ -55,13 +55,13 @@ const categories = [
     title: 'Industrial RO Plant',
     image: imgIndustrial,
     description: 'Purification solutions for large-scale industrial use.',
-    link: '/industrial-ro-plant',
+    link: '/industrial-ro',
   },
   {
     title: 'Water Softening Plant',
     image: imgSoftening,
     description: 'Solutions that remove hardness-causing minerals from water.',
-    link: '/water-softening-plant',
+    link: '/softening-plant',
   },
 ];
 

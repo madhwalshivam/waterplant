@@ -5,7 +5,7 @@ import imgIntro from '../assets/ddd.jpg';
 import Footer from '../components/Footer';
 import PopularIozined from '../components/PopularIozined';
 import WaterIonizerSlider from '../components/WaterIonizerProducts';
-
+import bImage from '../assets/b.jpg';
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -18,18 +18,20 @@ const hoverEffect = {
 
 const WaterIonizer = () => (
   <div className="font-sans antialiased text-gray-800 bg-gray-100">   
-     <section className="bg-cover bg-center h-24 flex items-center justify-center text-white relative">
-            <div className="absolute inset-0 bg-blue-900"></div>
-            <motion.h1
-              className="text-2xl md:text-4xl font-bold z-10 px-4 py-2 rounded-lg"
-              initial="hidden"
-              animate="visible"
-              variants={fadeIn}
-            >
-              Water Ionizer Machine Manufacturers
-            </motion.h1>
-          </section>
-   
+
+   <section
+         className="bg-center bg-cover h-48 flex items-center justify-center text-white"
+         style={{ backgroundImage: `url(${bImage})` }}
+       >
+         <motion.h1
+           className="text-2xl md:text-4xl font-bold z-10 px-4 py-2 rounded-lg"
+           initial="hidden"
+           animate="visible"
+           variants={fadeIn}
+         >
+           Water Ionizer Machine Manufacturers
+         </motion.h1>
+       </section>
   <section className="py-12 px-6 md:px-12 lg:px-24 bg-gray-50">
     <div className="max-w-7xl mx-auto space-y-8">
       <motion.div

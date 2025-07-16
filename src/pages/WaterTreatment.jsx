@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
-import imgWaterTreatment from '../assets/Water-Treatment-Plant-thumb.jpg';
+import imgWaterTreatment from '../assets/watertreatment.jpg';
 import Footer from '../components/Footer';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { motion} from 'framer-motion';
 import Testimonials from '../components/Testimonials';
 import CategorySliderPage from '../components/WaterProducts';
-
+import bImage from '../assets/b.jpg';
 const fadeIn = {
   hidden: { opacity: 0, y: -20 },
   visible: {
@@ -41,19 +41,20 @@ const sliderSettings = {
 
 const WaterTreatment = () => (
   <div className="font-sans antialiased text-gray-800 bg-gray-100">
-    {/* Hero Section */}
-     <section className="bg-cover bg-center h-24 flex items-center justify-center text-white relative">
-               <div className="absolute inset-0 bg-blue-900"></div>
-               <motion.h1
-                 className="text-2xl md:text-4xl font-bold z-10 px-4 py-2 rounded-lg"
-                 initial="hidden"
-                 animate="visible"
-                 variants={fadeIn}
-               >
-                  Water Treatment Plant Manufacturers
-               </motion.h1>
-             </section>
-
+    
+ <section
+         className="bg-center bg-cover h-48 flex items-center justify-center text-white"
+         style={{ backgroundImage: `url(${bImage})` }}
+       >
+         <motion.h1
+           className="text-2xl md:text-4xl font-bold z-10 px-4 py-2 rounded-lg"
+           initial="hidden"
+           animate="visible"
+           variants={fadeIn}
+         >
+           Water Treatment Plant Manufacturers
+         </motion.h1>
+       </section>
     {/* Why Water Treatment Section */}
     <section className="py-16 px-6 md:px-12 lg:px-24 bg-white">
       <div className="max-w-7xl mx-auto">
