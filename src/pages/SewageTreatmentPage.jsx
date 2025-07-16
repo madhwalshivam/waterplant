@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 import Testimonials from '../components/Testimonials';
 import SewageSlider from '../components/SewageSlider';
 
-import bottlingImg from '../assets/Sewage2.jpg';
+import bottlingImg from '../assets/s1.jpg';
 import bImage from '../assets/b.jpg';
 import imgWastewater from '../assets/Sewage-Treatment.jpg';
 import imgWastewater1 from '../assets/Effluent-Treatment.jpg';
