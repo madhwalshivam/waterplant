@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom"; // 👈 Import Link from React Router
+import { Link } from "react-router-dom"; 
 
 import img1 from "../assets/s.jpg";
 import img1Mob from "../assets/sm-1.jpg";
@@ -41,10 +41,9 @@ const Home = () => {
 
   return (
     <>
-      {/* Hero Section */}
-      {isMobile ? (
-        // 📱 Mobile: Image inside card
-        <div className="w-full px-4 py-6 flex justify-center bg-gray-100">
+      
+      {isMobile ? (      
+        <div className="w-full  flex justify-center bg-gray-100">
           <Link to="/contact" className="max-w-sm w-full overflow-hidden shadow-lg bg-white">
             <img
               src={slides[current].mobile}
@@ -75,7 +74,7 @@ const Home = () => {
       )}
 
       {/* Why Choose Us Section */}
-      <section className="bg-gray-100 py-20 px-6 md:px-10">
+      <section className="bg-gray-100 py-10 px-6 md:px-10">
         <div className="max-w-7xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
             Why Choose Hydro X?

@@ -57,7 +57,7 @@ const Footer = () => {
             Get in Touch
           </h4>
           <p className="text-gray-400">
-            H-85 Noida, Sector 63,<br />
+            B 97 NOIDA SECTOR 64,<br />
             Gautam Buddha Nagar - 201301,<br />
             Uttar Pradesh, India
           </p>

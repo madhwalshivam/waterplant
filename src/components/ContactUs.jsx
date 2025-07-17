@@ -32,7 +32,7 @@ const ContactUs = () => {
               <div className="flex items-start gap-2">
                 <LocationOn fontSize="small" />
                 <span>
-                  H-85 Noida, Sector 63, Gautam Buddha Nagar - 201301, Uttar
+                  B 97 NOIDA SECTOR 64, Gautam Buddha Nagar - 201301, Uttar
                   Pradesh, India
                 </span>
               </div>
