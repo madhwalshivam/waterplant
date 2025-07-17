@@ -39,24 +39,37 @@ const Home = () => {
 
   return (
     <>
-      {/* Hero Slider */}
-<div className="relative w-full h-screen overflow-hidden">
-  {slides.map((slide, index) => (
-    <div
-      key={index}
-      className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-        index === current ? "opacity-100 z-10" : "opacity-0 z-0"
-      }`}
-    >
-      <img
-        src={isMobile ? slide.mobile : slide.desktop}
-        alt={`Slide ${index}`}
-        className="w-full h-screen object-cover"
-      />
-    </div>
-  ))}
-</div>
-
+      {/* Hero Section */}
+      {isMobile ? (
+        // 📱 Mobile: Image inside card
+        <div className="w-full px-4 py-6 flex justify-center bg-gray-100">
+          <div className="max-w-sm w-full rounded-2xl overflow-hidden shadow-lg bg-white">
+            <img
+              src={slides[current].mobile}
+              alt={`Slide ${current}`}
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </div>
+      ) : (
+        // 🖥 Desktop: Fullscreen background slider
+        <div className="relative w-full h-screen overflow-hidden">
+          {slides.map((slide, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                index === current ? "opacity-100 z-10" : "opacity-0 z-0"
+              }`}
+            >
+              <img
+                src={slide.desktop}
+                alt={`Slide ${index}`}
+                className="w-full h-screen object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Why Choose Us Section */}
       <section className="bg-gray-100 py-20 px-6 md:px-10">
@@ -122,6 +135,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
