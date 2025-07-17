@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
-import img1 from "../assets/Sewage1.jpg";
-import img2 from "../assets/s.jpg";
-import img3 from "../assets/s1.jpg";
+import img1 from "../assets/s.jpg";
+import img1Mob from "../assets/sm-1.jpg";
+import img2 from "../assets/Sewage1.jpg";
+import img2Mob from "../assets/sm-1.jpg";
+import img3 from "../assets/s.jpg";
+import img3Mob from "../assets/sm-1.jpg";
+
 import Footer from "../components/Footer";
 import SewageFeatures from "../components/SewageFeatures";
 import ReadMoreButton from "../components/ReadMoreButton";
@@ -10,61 +14,49 @@ import PopularProducts from "../components/PopularProducts";
 import Testimonials from "../components/Testimonials";
 import ProductHighlights from "../components/Product";
 
-const slides = [
-  {
-    image: img1,
-    heading: "WATER TREATMENT PLANTS",
-    subtext: "Transforming Every Drop with Our Advanced Water Treatment Plants!",
-  },
-  {
-    image: img2,
-    heading: "SEWAGE TREATMENT SOLUTIONS",
-    subtext: "Clean Water. Clean Future. Reliable Sewage Technologies You Can Trust.",
-  },
-  {
-    image: img3,
-    heading: "WASTE WATER MANAGEMENT",
-    subtext: "Turning Wastewater into Worth — Sustainably & Smartly.",
-  },
-];
-
 const Home = () => {
   const [current, setCurrent] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  const slides = [
+    { desktop: img1, mobile: img1Mob },
+    { desktop: img2, mobile: img2Mob },
+    { desktop: img3, mobile: img3Mob },
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(interval);
+  }, [slides.length]);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
     <>
-      {/* Hero Slider Section with pt-16 to offset navbar height */}
-      <div className="relative w-full min-h-screen overflow-hidden">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              index === current ? "opacity-100 z-10" : "opacity-0 z-0"
-            }`}
-          >
-            <img
-              src={slide.image}
-              alt={`Slide ${index}`}
-              className="w-full h-full object-cover"
-            />
-            {/* <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center px-6 text-center">
-              <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wide drop-shadow-md mb-4">
-                {slide.heading}
-              </h1>
-              <p className="text-white text-base sm:text-lg md:text-xl max-w-2xl drop-shadow">
-                {slide.subtext}
-              </p>
-            </div> */}
-          </div>
-        ))}
-      </div>
+      {/* Hero Slider */}
+<div className="relative w-full h-screen overflow-hidden">
+  {slides.map((slide, index) => (
+    <div
+      key={index}
+      className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+        index === current ? "opacity-100 z-10" : "opacity-0 z-0"
+      }`}
+    >
+      <img
+        src={isMobile ? slide.mobile : slide.desktop}
+        alt={`Slide ${index}`}
+        className="w-full h-screen object-cover"
+      />
+    </div>
+  ))}
+</div>
+
 
       {/* Why Choose Us Section */}
       <section className="bg-gray-100 py-20 px-6 md:px-10">
@@ -116,8 +108,9 @@ const Home = () => {
           ))}
         </div>
       </section>
-      {/* Remaining Components */}
-      <ProductHighlights/>
+
+      {/* Other Sections */}
+      <ProductHighlights />
       <SewageFeatures />
       <ReadMoreButton />
       <CompanyInfo />
@@ -129,3 +122,7 @@ const Home = () => {
 };
 
 export default Home;
+
+
+
+
