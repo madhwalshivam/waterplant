@@ -1,5 +1,6 @@
-import mineral from "../assets/mineralwater.jpg";
-import metal from "../assets/metal.jpg";
+import React from "react";
+import mineral from "../assets/mineralwater.webp";
+import metal from "../assets/metal.webp";
 
 const ProductHighlights = () => {
   const products = [
@@ -48,10 +49,11 @@ const ProductHighlights = () => {
           {products.map((product, index) => (
             <div
               key={index}
-              className="flex flex-col md:flex-row items-center bg-white rounded-3xl shadow-xl overflow-hidden group hover:shadow-2xl hover:scale-[1.01] transition-all duration-500"
+              className="flex flex-col md:flex-row items-center bg-white rounded-3xl shadow-md overflow-hidden group hover:shadow-lg hover:scale-[1.01] transition-transform duration-300"
             >
-              <div className="md:w-1/2 h-64 md:h-full">
+              <div className="md:w-1/2 h-64 md:h-[350px]">
                 <img
+                  loading="lazy"
                   src={product.image}
                   alt={product.alt}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
@@ -73,4 +75,4 @@ const ProductHighlights = () => {
   );
 };
 
-export default ProductHighlights;
+export default React.memo(ProductHighlights);
