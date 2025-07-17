@@ -1,11 +1,5 @@
-import { motion } from "framer-motion";
 import mineral from "../assets/mineralwater.jpg";
 import metal from "../assets/metal.jpg";
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0 },
-};
 
 const ProductHighlights = () => {
   const products = [
@@ -13,7 +7,6 @@ const ProductHighlights = () => {
       image: mineral,
       alt: "Mineral Water Plant",
       title: "Mineral Water Plant",
-      delay: 0.2,
       description: (
         <>
           At <strong>Hydro X</strong>, we design mineral water solutions that
@@ -26,7 +19,6 @@ const ProductHighlights = () => {
       image: metal,
       alt: "Industrial RO Water Plant",
       title: "Industrial RO Water Plant",
-      delay: 0.4,
       description: (
         <>
           <strong>Hydro X Water Treatment Pvt. Ltd.</strong> leads in
@@ -54,14 +46,9 @@ const ProductHighlights = () => {
         {/* Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {products.map((product, index) => (
-            <motion.div
+            <div
               key={index}
               className="flex flex-col md:flex-row items-center bg-white rounded-3xl shadow-xl overflow-hidden group hover:shadow-2xl hover:scale-[1.01] transition-all duration-500"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeInUp}
-              transition={{ duration: 0.6, delay: product.delay }}
             >
               <div className="md:w-1/2 h-64 md:h-full">
                 <img
@@ -78,7 +65,7 @@ const ProductHighlights = () => {
                   {product.description}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
@@ -87,4 +74,3 @@ const ProductHighlights = () => {
 };
 
 export default ProductHighlights;
-

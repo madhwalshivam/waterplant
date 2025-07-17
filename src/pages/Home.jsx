@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom"; // 👈 Import Link from React Router
+
 import img1 from "../assets/s.jpg";
 import img1Mob from "../assets/sm-1.jpg";
-import img2 from "../assets/Sewage1.jpg";
-import img2Mob from "../assets/sm-1.jpg";
-import img3 from "../assets/s.jpg";
-import img3Mob from "../assets/sm-1.jpg";
+import img2 from "../assets/ban1.jpg";
+import img2Mob from "../assets/sm-2.jpg";
+import img3 from "../assets/wws.jpg";
+import img3Mob from "../assets/sm-3.jpg";
 
 import Footer from "../components/Footer";
 import SewageFeatures from "../components/SewageFeatures";
@@ -43,19 +45,20 @@ const Home = () => {
       {isMobile ? (
         // 📱 Mobile: Image inside card
         <div className="w-full px-4 py-6 flex justify-center bg-gray-100">
-          <div className="max-w-sm w-full rounded-2xl overflow-hidden shadow-lg bg-white">
+          <Link to="/contact" className="max-w-sm w-full overflow-hidden shadow-lg bg-white">
             <img
               src={slides[current].mobile}
               alt={`Slide ${current}`}
               className="w-full h-auto object-contain"
             />
-          </div>
+          </Link>
         </div>
       ) : (
         // 🖥 Desktop: Fullscreen background slider
         <div className="relative w-full h-screen overflow-hidden">
           {slides.map((slide, index) => (
-            <div
+            <Link
+              to="/contact"
               key={index}
               className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
                 index === current ? "opacity-100 z-10" : "opacity-0 z-0"
@@ -66,7 +69,7 @@ const Home = () => {
                 alt={`Slide ${index}`}
                 className="w-full h-screen object-cover"
               />
-            </div>
+            </Link>
           ))}
         </div>
       )}
@@ -135,8 +138,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
-
-
-
