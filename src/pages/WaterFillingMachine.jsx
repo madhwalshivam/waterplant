@@ -7,6 +7,7 @@ import CategorySliderPage from '../components/WaterProducts';
 import Testimonials from '../components/Testimonials';
 import WaterFillingProductSlider from '../components/WaterFillingProductSlider';
 import bImage from '../assets/b.jpg';
+import { Helmet } from 'react-helmet-async';
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -23,6 +24,26 @@ const hoverEffect = {
 
 const WaterFillingMachine = () => (
   <div className="font-sans antialiased text-gray-800 bg-gray-100">
+    <Helmet>
+  <title>Top Water Filling Machine Manufacturers in Delhi | Hydro X</title>
+  <meta
+    name="description"
+    content="Hydro X is one of the top water filling machine manufacturers in Delhi. Our advanced, energy-efficient, and durable filling machines are used across India and internationally."
+  />
+  <meta
+    name="keywords"
+    content="Water Filling Machine, Bottle Filling Machine, Water Filling Machine Manufacturers in Delhi, Mineral Water Plant, Hydro X Water Filling"
+  />
+  <link rel="canonical" href="https://hydroxwatertreatment.com/water-filling" />
+  <meta property="og:title" content="Top Water Filling Machine Manufacturers in Delhi | Hydro X" />
+  <meta
+    property="og:description"
+    content="Get top-quality water filling machines from Hydro X. Engineered for precision, speed, and durability. Serving clients across India and globally."
+  />
+  <meta property="og:url" content="https://hydroxwatertreatment.com/water-filling" />
+  <meta property="og:image" content="https://hydroxwatertreatment.com/water-filling" />
+</Helmet>
+
     <section
       className="bg-center bg-cover h-48 flex items-center justify-center text-white"
       style={{ backgroundImage: `url(${bImage})` }}

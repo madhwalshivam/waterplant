@@ -18,14 +18,12 @@ import FPOPage from "./pages/FPO";
 import SSPage from "./pages/SS";
 import SewageTreatmentPage from "./pages/SewageTreatmentPage";
 import EffluentTreatmentPage from "./pages/EffluentTreatmentPage";
-
-const About = () => <h1 className="pt-24 text-2xl font-bold">About Page</h1>;
-const Contact = () => <h1 className="pt-24 text-2xl font-bold">Contact Page</h1>;
-
+import { HelmetProvider } from 'react-helmet-async'; 
 
 function App() {
   return (
     <>
+    <HelmetProvider>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home/>} />
@@ -46,6 +44,7 @@ function App() {
            <Route path="/sewage-treatment" element={<SewageTreatmentPage/>} />
             <Route path="/effluent-treatment" element={<EffluentTreatmentPage/>} />
       </Routes>
+      </HelmetProvider>
     </>
   );
 }

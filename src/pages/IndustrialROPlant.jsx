@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import softeningImg from '../assets/industrial.jpg';
 import CategorySliderPage from '../components/WaterProducts';
 import Testimonials from '../components/Testimonials';
@@ -18,7 +19,26 @@ const hoverEffect = {
 
 const IndustrialROPlant = () => (
   <div className="font-sans antialiased text-gray-800 bg-gray-100">
-    
+    <Helmet>
+  <title>Industrial RO Water Plant Manufacturers in Delhi | Hydro X</title>
+  <meta
+    name="description"
+    content="Hydro X Water Treatment Pvt. Ltd. is one of the leading Industrial RO Plant Manufacturers in Delhi, providing high-efficiency, low-maintenance water purification systems for industrial use across India and globally."
+  />
+  <meta
+    name="keywords"
+    content="Industrial RO Plant, RO Water Plant Manufacturers Delhi, RO System Suppliers India, Industrial Water Purifier, RO Plant for Industry"
+  />
+  <link rel="canonical" href="https://hydroxwatertreatment.com/industrial-ro" />
+  <meta property="og:title" content="Industrial RO Water Plant Manufacturers in Delhi | Hydro X" />
+  <meta
+    property="og:description"
+    content="Top-rated Industrial RO Water Plant manufacturers in India. Trusted by industries across pharmaceuticals, food & beverage, and more. Contact us for custom RO systems."
+  />
+  <meta property="og:url" content="https://hydroxwatertreatment.com/industrial-ro" />
+  <meta property="og:image" content="https://hydroxwatertreatment.com/industrial-ro" />
+</Helmet>
+
                 <section
                       className="bg-center bg-cover h-48 flex items-center justify-center text-white"
                       style={{ backgroundImage: `url(${bImage})` }}

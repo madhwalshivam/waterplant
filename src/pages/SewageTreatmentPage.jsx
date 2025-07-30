@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import { Helmet } from 'react-helmet-async';
 import Footer from '../components/Footer';
 import Testimonials from '../components/Testimonials';
 import SewageSlider from '../components/SewageSlider';
@@ -44,6 +44,18 @@ const sliderSettings = {
 
 const SewageTreatmentPage = () => (
   <div className="font-sans antialiased text-gray-800 bg-gray-100">
+<Helmet>
+  <title>Sewage Treatment Plant Manufacturers in Delhi | Hydro X Water Treatment Pvt. Ltd.</title>
+  <meta
+    name="description"
+    content="Hydro X Water Treatment Pvt. Ltd. is a trusted manufacturer of high-quality sewage treatment plants in Delhi. We offer custom, eco-friendly sewage solutions for industrial and municipal needs."
+  />
+  <meta
+    name="keywords"
+    content="Sewage Treatment Plant, STP Plant Manufacturers Delhi, STP Plant India, Hydro X Water Treatment, Industrial STP, Sewage Solutions Delhi"
+  />
+  <link rel="canonical" href="https://hydroxwatertreatment.com/sewage-treatment" />
+</Helmet>
    
  <section
                       className="bg-center bg-cover h-48 flex items-center justify-center text-white"

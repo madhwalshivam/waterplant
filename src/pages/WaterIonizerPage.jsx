@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from "react-helmet-async";
 import { Link } from 'react-router-dom';
 import imgIntro from '../assets/ddd.jpg';
 import Footer from '../components/Footer';
@@ -18,6 +19,12 @@ const hoverEffect = {
 
 const WaterIonizer = () => (
   <div className="font-sans antialiased text-gray-800 bg-gray-100">   
+      <Helmet>
+  <title>Water Ionizer Machine Manufacturers | Hydro X Water Treatment Pvt. Ltd.</title>
+  <meta name="description" content="Top water ionizer machine manufacturers in Delhi offering alkaline water solutions for homes and industries. Superior quality, pH balance, and nationwide delivery." />
+  <meta name="keywords" content="water ionizer, alkaline water machine, ionized water, Delhi water treatment, Hydro X, water purifier manufacturers" />
+  <link rel="canonical" href="https://hydroxwatertreatment.com/water-ionizer"/>
+</Helmet>
 
    <section
          className="bg-center bg-cover h-48 flex items-center justify-center text-white"

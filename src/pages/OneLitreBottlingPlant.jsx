@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
-import bottlingImg from '../assets/machine3.jpeg'; 
+import { Helmet } from 'react-helmet-async';
+import bottlingImg from '../assets/machine3.jpg'; 
 import CategorySliderPage from '../components/WaterProducts';
 import Testimonials from '../components/Testimonials';
 import OneLitreBottlingProductSlider from '../components/OneLitreBottlingProductSlider';
@@ -18,7 +19,26 @@ const hoverEffect = {
 
 const OneLitreBottlingPlant = () => (
   <div className="font-sans antialiased text-gray-800 bg-gray-100">
-  
+  <Helmet>
+  <title>1 Litre Bottling Plant Manufacturers in Delhi | Hydro X</title>
+  <meta
+    name="description"
+    content="Hydro X is a leading manufacturer of 1 Litre Bottling Plants in Delhi, offering precision-engineered solutions with high-speed filling, compact design, and global export capability."
+  />
+  <meta
+    name="keywords"
+    content="1 Litre Bottling Plant, Mineral Water Bottle Plant, Bottling Plant Manufacturers in Delhi, Hydro X Bottling Plant, Water Bottle Filling Machine"
+  />
+  <link rel="canonical" href="https://hydroxwatertreatment.com/bottling-plant" />
+  <meta property="og:title" content="1 Litre Bottling Plant Manufacturers in Delhi | Hydro X" />
+  <meta
+    property="og:description"
+    content="Top-rated 1 Litre Bottling Plant manufacturers in India. High-speed operations, durable design, and precise water filling systems. Contact Hydro X now."
+  />
+  <meta property="og:url" content="https://hydroxwatertreatment.com/bottling-plant" />
+  <meta property="og:image" content="https://hydroxwatertreatment.com/bottling-plant" />
+</Helmet>
+
  <section
                       className="bg-center bg-cover h-48 flex items-center justify-center text-white"
                       style={{ backgroundImage: `url(${bImage})` }}

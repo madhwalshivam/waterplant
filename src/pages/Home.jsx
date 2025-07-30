@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom"; 
-
+import { Helmet } from "react-helmet-async";
 import img1 from "../assets/s.jpg";
 import img1Mob from "../assets/sm-1.jpg";
 import img2 from "../assets/ban1.jpg";
 import img2Mob from "../assets/sm-2.jpg";
 import img3 from "../assets/wws.jpg";
 import img3Mob from "../assets/sm-3.jpg";
-
 import Footer from "../components/Footer";
 import SewageFeatures from "../components/SewageFeatures";
 import ReadMoreButton from "../components/ReadMoreButton";
@@ -41,6 +40,18 @@ const Home = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Hydro Water Treatment Pvt Ltd</title>
+        <meta
+          name="description"
+          content="Hydro Water Treatment Pvt Ltd provides world-class water purification, wastewater treatment, and RO systems for industrial and domestic applications in India."
+        />
+        <meta
+          name="keywords"
+          content="RO Plant, Water Treatment, Hydro Water, Sewage Treatment, Wastewater Plant, Industrial RO, STP, ETP, Hydrox"
+        />
+        <link rel="canonical" href="https://hydroxwatertreatment.com/" />
+      </Helmet>
       
       {isMobile ? (      
         <div className="w-full  flex justify-center bg-gray-100">

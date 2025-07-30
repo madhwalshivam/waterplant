@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
+import { Helmet } from 'react-helmet-async';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Footer from '../components/Footer';
@@ -37,6 +38,19 @@ const sliderSettings = {
 
 const EffluentTreatmentPage = () => (
   <div className="font-sans antialiased text-gray-800 bg-gray-100">
+    <Helmet>
+  <title>Effluent Treatment Plant Manufacturers in Delhi | Hydro X Water Treatment Pvt. Ltd.</title>
+  <meta
+    name="description"
+    content="Hydro X Water Treatment Pvt. Ltd. is a leading manufacturer of advanced Effluent Treatment Plants (ETP) in Delhi, offering eco-friendly and customized industrial wastewater solutions."
+  />
+  <meta
+    name="keywords"
+    content="Effluent Treatment Plant, ETP Plant Delhi, ETP Manufacturer India, Industrial Wastewater Treatment, Hydro X Water, Custom Effluent Systems"
+  />
+  <link rel="canonical" href="https://hydroxwatertreatment.com/effluent-treatment" />
+</Helmet>
+
 <section
                       className="bg-center bg-cover h-48 flex items-center justify-center text-white"
                       style={{ backgroundImage: `url(${bImage})` }}

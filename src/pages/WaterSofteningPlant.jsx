@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Footer from '../components/Footer';
 import softeningImg from '../assets/softning.jpg';
 import WaterSofteningSlider from '../components/WaterSofteningSlider';
@@ -19,6 +20,13 @@ const hoverEffect = {
 
 const WaterSofteningPlant = () => (
   <div className="font-sans antialiased text-gray-800 bg-gray-100">
+    <Helmet>
+  <title>Water Softening Plant Manufacturers in Delhi | Hydro X Water Treatment</title>
+  <meta name="description" content="Hydro X Water Treatment Pvt. Ltd. is a top water softening plant manufacturer in Delhi, offering efficient, customizable, and cost-effective solutions across India and globally." />
+  <meta name="keywords" content="Water Softening Plant, Water Softener Manufacturers in Delhi, Industrial Water Softener, Water Treatment Plants, Hard Water Solutions India" />
+  <link rel="canonical" href="https://hydroxwatertreatment.com/softening-plant" />
+</Helmet>
+
 <section
                       className="bg-center bg-cover h-48 flex items-center justify-center text-white"
                       style={{ backgroundImage: `url(${bImage})` }}

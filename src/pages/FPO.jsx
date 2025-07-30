@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import bottlingImg from '../assets/fo1.jpg';
 import Testimonials from '../components/Testimonials';
 import bImage from '../assets/b.jpg';
+import { Helmet } from 'react-helmet-async';
 import FoSlider from '../components/FpoSlider';
 import PopularProduct from '../components/New';
 
@@ -19,6 +20,18 @@ const hoverEffect = {
 
 const FPOPage = () => (
   <div className="font-sans antialiased text-gray-800 bg-gray-100">
+      <Helmet>
+      <title>Top FRP RO Plant Manufacturers in Delhi | Hydro X Water Treatment</title>
+      <meta
+        name="description"
+        content="Hydro X Water Treatment Pvt. Ltd. is a leading FRP RO Plant manufacturer in Delhi, providing energy-efficient, durable, and custom water treatment solutions nationwide and globally."
+      />
+      <meta
+        name="keywords"
+        content="FRP RO Plant Manufacturers Delhi, Industrial RO Plants, Water Treatment Solutions India, RO Plant Exporters, Fiber Reinforced Plastic RO Plant"
+      />
+      <link rel="canonical" href="https://hydroxwatertreatment.com/frp-ro" />
+    </Helmet>
     <section
       className="bg-center bg-cover h-48 flex items-center justify-center text-white"
       style={{ backgroundImage: `url(${bImage})` }}

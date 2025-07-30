@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import bottlingImg from '../assets/sss1.jpg';
 import Testimonials from '../components/Testimonials';
 import bImage from '../assets/b.jpg';
+import { Helmet } from 'react-helmet-async';
 import PopularProduct from '../components/New';
 import SsSlider from '../components/SsSlider';
 
@@ -19,6 +20,18 @@ const hoverEffect = {
 
 const SSPage = () => (
   <div className="font-sans antialiased text-gray-800 bg-gray-100">
+        <Helmet>
+      <title>SS RO Plant Manufacturers in Delhi | Hydro X Water Treatment</title>
+      <meta
+        name="description"
+        content="Hydro X Water Treatment Pvt. Ltd. is one of the top SS RO Plant manufacturers in Delhi, providing durable and energy-efficient stainless steel RO systems for industrial and commercial use."
+      />
+      <meta
+        name="keywords"
+        content="SS RO Plant Manufacturers, Stainless Steel RO Plant Delhi, Industrial RO Plant, SS RO System India, Hydro X Water Treatment"
+      />
+      <link rel="canonical" href="https://hydroxwatertreatment.com/ss-ro" />
+    </Helmet>
     <section
       className="bg-center bg-cover h-48 flex items-center justify-center text-white"
       style={{ backgroundImage: `url(${bImage})` }}

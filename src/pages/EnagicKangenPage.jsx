@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from "react-helmet-async";
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
@@ -51,7 +52,14 @@ const sliderProducts = [
 
 const EnagicKangenPage = () => {
   return (
+    
     <div className="text-gray-800 font-sans">
+      <Helmet>
+  <title>Enagic Kangen Water Machine | Hydro X Water Treatment Pvt. Ltd.</title>
+  <meta name="description" content="Buy premium Enagic Kangen Water Machines from top manufacturers in Delhi. Health benefits, high quality & efficient purification systems available." />
+  <meta name="keywords" content="Kangen water machine, Enagic Delhi, alkaline water purifier, Hydro X Water Treatment, water treatment Delhi" />
+  <link rel="canonical" href="https://hydroxwatertreatment.com/enagic"/>
+</Helmet>
 
 
 <section

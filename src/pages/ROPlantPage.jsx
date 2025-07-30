@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import bottlingImg from '../assets/machine4.jpg'; 
 import Testimonials from '../components/Testimonials';
 import bImage from '../assets/b.jpg';
+import { Helmet } from 'react-helmet-async';
 import RoSlider from '../components/RoSlider';
 
 const fadeIn = {
@@ -18,6 +19,23 @@ const hoverEffect = {
 
 const ROPlantPage = () => (
   <div className="font-sans antialiased text-gray-800 bg-gray-100">
+    <Helmet>
+      <title>Top RO Plant Manufacturers in Delhi | Hydro X Water Treatment</title>
+      <meta
+        name="description"
+        content="Hydro X Water Treatment Pvt. Ltd. is a leading RO Plant manufacturer in Delhi, offering high-efficiency water purification systems for industrial and commercial use across India and worldwide."
+      />
+      <meta property="og:title" content="Top RO Plant Manufacturers in Delhi | Hydro X" />
+      <meta
+        property="og:description"
+        content="Discover premium RO Plants from one of Delhi's leading manufacturers. Custom-built solutions for industries, businesses, and export markets."
+      />
+      <meta property="og:image" content="https://hydroxwatertreatment.com/ro-plant" />
+      <meta property="og:url" content="https://hydroxwatertreatment.com/ro-plant" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <link rel="canonical" href="https://hydroxwatertreatment.com/ro-plant" />
+    </Helmet>
+
     <section
       className="bg-center bg-cover h-48 flex items-center justify-center text-white"
       style={{ backgroundImage: `url(${bImage})` }}

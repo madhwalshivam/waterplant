@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import imgWaterTreatment from '../assets/watertreatment.jpg';
+import { Helmet } from 'react-helmet-async';
 import Footer from '../components/Footer';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -41,7 +42,13 @@ const sliderSettings = {
 
 const WaterTreatment = () => (
   <div className="font-sans antialiased text-gray-800 bg-gray-100">
-    
+    <Helmet>
+  <title>Water Treatment Plant Manufacturers in Delhi | Hydro X Water Treatment Pvt. Ltd.</title>
+  <meta name="description" content="Leading water treatment plant manufacturers in Delhi offering advanced filtration and purification solutions. Trusted for industrial, municipal, and global water treatment needs." />
+  <meta name="keywords" content="Water Treatment Plant, industrial water treatment, water purification system, Delhi water plant, Hydro X, water filter manufacturers India" />
+  <link rel="canonical" href="https://hydroxwatertreatment.com/water-treatment"/>
+</Helmet>
+
  <section
          className="bg-center bg-cover h-48 flex items-center justify-center text-white"
          style={{ backgroundImage: `url(${bImage})` }}

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import aboutImg from "../assets/about.jpg";
 import aboutBg from "../assets/worker-banner.jpg";
 import CompanyInfo from "../components/CompanyInfo";
@@ -20,7 +21,20 @@ const AboutUs = () => {
         isVisible ? "opacity-100" : "opacity-0"
       } bg-white text-gray-800`}
     >
-      {/* Banner Section with Background Image */}
+      <Helmet>
+        <title>About Us - Hydro X Water Treatment Pvt Ltd</title>
+        <meta
+          name="description"
+          content="Hydro X Water Treatment Pvt Ltd is one of the top Effluent Treatment Plant Manufacturers in Delhi, India, providing sustainable water solutions since 2016."
+        />
+        <meta
+          name="keywords"
+          content="Effluent Treatment Plant, Water Treatment Delhi, Hydro X, Wastewater Solutions, Kangen Machine, Mineral Water Plants"
+        />
+        <link rel="canonical" href="https://hydroxwatertreatment.com/about" />
+      </Helmet>
+
+      {/* Banner Section */}
       <section
         className="relative py-20 px-4  md:px-20 text-center bg-cover bg-center"
         style={{ backgroundImage: `url(${aboutBg})` }}
@@ -40,7 +54,6 @@ const AboutUs = () => {
       {/* Company Introduction */}
       <section className="py-16 px-4 md:px-20 bg-gradient-to-b from-white via-blue-50 to-white">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center bg-white rounded-2xl shadow-xl p-8">
-          {/* Left Image */}
           <div className="p-4 rounded-xl shadow-md bg-white">
             <img
               src={aboutImg}
@@ -49,25 +62,20 @@ const AboutUs = () => {
             />
           </div>
 
-     {/* Right Text */}
-<div>
-  <h2 className="text-2xl md:text-3xl font-extrabold text-blue-900 leading-snug tracking-tight mb-4">
-    Top 5 Best Effluent Treatment Plant Manufacturers in Delhi, India
-  </h2>
-
-  <p className="mb-3 text-gray-700 leading-relaxed text-[16px]">
-    <strong>Hydro X Water Treatment</strong>, a pioneering force in the water treatment industry committed to delivering innovative solutions since our establishment in 2016. Founded by visionary CEO <strong>Mr. Rahul Tiwari</strong>, we have evolved into a trusted name synonymous with excellence and sustainability in water management.
-  </p>
-
-  <p className="mb-3 text-gray-700 leading-relaxed text-[16px]">
-    As a privately held company, we operate under the legal status of a Private Limited entity, ensuring a focus on quality, integrity, and customer satisfaction.
-  </p>
-
-  <p className="text-gray-700 leading-relaxed text-[16px]">
-    We provide cutting-edge Water Treatment Plants, high-quality Mineral Water Plants, and the revolutionary Enagic Kangen Machines.
-  </p>
-</div>
-
+          <div>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-blue-900 leading-snug tracking-tight mb-4">
+              Top 5 Best Effluent Treatment Plant Manufacturers in Delhi, India
+            </h2>
+            <p className="mb-3 text-gray-700 leading-relaxed text-[16px]">
+              <strong>Hydro X Water Treatment</strong>, a pioneering force in the water treatment industry committed to delivering innovative solutions since our establishment in 2016. Founded by visionary CEO <strong>Mr. Rahul Tiwari</strong>, we have evolved into a trusted name synonymous with excellence and sustainability in water management.
+            </p>
+            <p className="mb-3 text-gray-700 leading-relaxed text-[16px]">
+              As a privately held company, we operate under the legal status of a Private Limited entity, ensuring a focus on quality, integrity, and customer satisfaction.
+            </p>
+            <p className="text-gray-700 leading-relaxed text-[16px]">
+              We provide cutting-edge Water Treatment Plants, high-quality Mineral Water Plants, and the revolutionary Enagic Kangen Machines.
+            </p>
+          </div>
         </div>
       </section>
 

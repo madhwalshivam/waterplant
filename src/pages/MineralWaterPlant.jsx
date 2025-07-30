@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import bottlingImg from '../assets/machine.jpg'; 
 import CategorySliderPage from '../components/WaterProducts';
 import Testimonials from '../components/Testimonials';
+import { Helmet } from 'react-helmet-async';
 import bImage from '../assets/b.jpg';
 import MineralSlider from '../components/MineralSlider';
 const fadeIn = {
@@ -18,7 +19,29 @@ const hoverEffect = {
 
 const MineralWaterPlant = () => (
   <div className="font-sans antialiased text-gray-800 bg-gray-100">
-   
+   <Helmet>
+  <title>Top Mineral Water Plant Manufacturers in Delhi | Hydro X</title>
+  <meta
+    name="description"
+    content="Hydro X is a leading mineral water plant manufacturer in Delhi offering advanced filtration systems and energy-efficient solutions for pure, safe drinking water across India and abroad."
+  />
+  <meta
+    name="keywords"
+    content="Mineral Water Plant, Mineral Water Purification Plant, Water Treatment Systems, Hydro X, Delhi, India, Water Purification Equipment"
+  />
+  <link rel="canonical" href="https://hydroxwatertreatment.com/mineral-water" />
+
+  {/* Open Graph for Social Sharing */}
+  <meta property="og:title" content="Top Mineral Water Plant Manufacturers in Delhi | Hydro X" />
+  <meta
+    property="og:description"
+    content="Get high-quality, eco-friendly, and efficient mineral water purification plants from Hydro X. Trusted by industries nationwide and globally."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hydroxwatertreatment.com/mineral-water" />
+  <meta property="og:image" content="https://hydroxwatertreatment.com/mineral-water" />
+</Helmet>
+
     <section
           className="bg-center bg-cover h-48 flex items-center justify-center text-white"
           style={{ backgroundImage: `url(${bImage})` }}
